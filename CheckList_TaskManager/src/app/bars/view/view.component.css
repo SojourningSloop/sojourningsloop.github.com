@@ -1,0 +1,267 @@
+.barContent{
+    display: block;
+    position: absolute;
+    top: 17.8em;
+    left: 8.3em;
+    z-index: 5;
+    height: 200px;
+    width: 600px;
+    /*border: 1px solid black;*/
+}
+
+.newButton{
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 31.5%;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: yellow;
+}
+
+.searchButton{
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 38.5%;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: aqua;
+}
+
+.saveButton{
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: purple;
+}
+
+.deleteButton{
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: red;
+}
+
+.applyButton{
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: grey;
+}
+
+.unApplyButton{
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: greenyellow;
+}
+
+
+.radioButtonBackground{
+    display: block;
+    position: absolute;
+    top: 19.5%;
+    left: 79%;
+    height: 15px;
+    width: 15px;
+    border: 0.15em solid black;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: silver;
+}
+
+.radioButtonActive{
+    display: block;
+    position: absolute;
+    top: 0.18em;
+    left: 0.18em;
+    height: 10px;
+    width: 10px;
+    border: 0.10em solid black;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: greenyellow;
+}
+
+.radioButtonInActive{
+    display: block;
+    position: absolute;
+    top: 0.18em;
+    left: 0.18em;
+    height: 10px;
+    width: 10px;
+    border: 0.10em solid black;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: red;
+}
+
+#filter{
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    left: 3em;
+}
+
+#query{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+#visualize{
+    display: block;
+    position: absolute;
+    top: 2.5em;
+    left: 3em;
+}
+
+#export{
+    display: block;
+    position: absolute;
+    top: 4.5em;
+    left: 3em;
+}
+
+.exportLabels{
+    display:block;
+    position: absolute;
+    top: -1em;
+    left: 0em;
+    font-size: 70%;
+}
+
+#format{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+#formatLabel{
+    display: block;
+    position: absolute;
+    top: 0.1em;
+    left: 0.3em;
+    font-size: 70%;
+}
+
+#name{
+    display: block;
+    position: absolute;
+    top: 2.7em;
+    left: 0em;
+}
+
+#nameLabel{
+    display: block;
+    position: absolute;
+    top: 3em;
+    left: 0.3em;
+    font-size: 70%;
+}
+
+#directory{
+    display: block;
+    position: absolute;
+    top: 4.7em;
+    left: 0em;
+}
+
+#directoryLabel{
+    display: block;
+    position: absolute;
+    top: 6.2em;
+    left: 0.3em;
+    font-size: 70%;
+}
+
+.radioButtonText{
+    display: block;
+    position: absolute;
+    top: -1em;
+    left: 2em;
+}
+
+.radioButtonPanel{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+.radioButtonContent{
+    display: block;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    height: 100%;
+    width: 100%;
+    /*border: 0.10em solid black;*/
+}
+
+.radioButtonContentPanel{
+    display: block;
+    position: absolute;
+    top: 0.2em;
+    left: 17.5em;
+    height: 92%;
+    width: 40%;
+    /*border: 0.10em solid yellow;*/
+}
+
+.textbox{
+    display: block;
+    position: absolute;
+    top: 24%;
+    left: 0em;
+    height: 70%;
+    width: 97%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 16px;
+    resize: none;
+}
+
+.field{
+    display: block;
+    position: relative;
+    height: 1em;
+    width: 10em;
+    border: 1px solid black;
+}
+
+#exportColumn{
+    display: grid;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    row-gap: 1em;
+}

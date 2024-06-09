@@ -1,0 +1,60 @@
+<app-bar (onStateChange)="updateBarState($event)"></app-bar>
+
+<div class="barContent" *ngIf="activeState">View
+    <div class="newButton"></div>
+    <div class="searchButton"></div>
+    <div class="saveButton" *ngIf="(radioButtonState=='filter') || (radioButtonState=='export')" (click)="getInput()"></div>
+    <div class="deleteButton" *ngIf="radioButtonState=='filter'"></div>
+
+    <div class="applyButton" *ngIf="(radioButtonState=='filter') && (!applicationState0)" (click)="toggleState('applicationState0')"></div>
+    <div class="unApplyButton" *ngIf="(radioButtonState=='filter') && (applicationState0)" (click)="toggleState('applicationState0')"></div>
+
+    <div class="applyButton" *ngIf="(radioButtonState=='visualize') && (!applicationState1)" (click)="toggleState('applicationState1')"></div>
+    <div class="unApplyButton" *ngIf="(radioButtonState=='visualize') && (applicationState1)" (click)="toggleState('applicationState1')"></div>
+
+    <div class="radioButtonPanel">
+        <div id="filter" (click)="updateRadioButtonState('filter')">
+            <div class="radioButtonActive" *ngIf="radioButtonState=='filter'"></div>
+            <div class="radioButtonInActive" *ngIf="radioButtonState!='filter'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Filter</p>
+        </div>
+
+        <div id="visualize" (click)="updateRadioButtonState('visualize')">
+            <div class="radioButtonActive" *ngIf="radioButtonState=='visualize'"></div>
+            <div class="radioButtonInActive" *ngIf="radioButtonState!='visualize'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Visualize</p>
+        </div>
+
+        <div id="export" (click)="updateRadioButtonState('export')">
+            <div class="radioButtonActive" *ngIf="radioButtonState=='export'"></div>
+            <div class="radioButtonInActive" *ngIf="radioButtonState!='export'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Export</p>
+        </div>
+    </div>
+
+    <div class="radioButtonContentPanel">
+        <div class="radioButtonContent" *ngIf="radioButtonState=='filter'">
+            <p id="query">Query:</p>
+            <textarea class="textbox" [(ngModel)]="queryData"></textarea>
+        </div>
+        <div class="radioButtonContent" *ngIf="radioButtonState=='visualize'">
+            <p id="formatLabel">Format</p>
+            <input class="field" id="format" [(ngModel)]="visualizeFormatData">
+        </div>
+        <div class="radioButtonContent" *ngIf="radioButtonState=='export'">
+
+            <p id="formatLabel">Format</p>
+            <p id="nameLabel">Name</p>
+            <p id="directoryLabel">Directory</p>
+
+            <div id="exportColumn">
+                <input class="field" [(ngModel)]="exportFormatData">
+                <input class="field" [(ngModel)]="nameData">
+                <input class="field" [(ngModel)]="directoryData">
+            </div>
+        </div>
+    </div>
+</div>

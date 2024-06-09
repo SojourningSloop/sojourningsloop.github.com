@@ -1,0 +1,9 @@
+<app-bar (onStateChange)="updateBarState($event)"></app-bar>
+
+<div class="barContent" *ngIf="activeState">Synchronize
+    <app-synchronization class="synchronization"></app-synchronization>
+    <textarea class="output"></textarea>
+
+
+
+</div>

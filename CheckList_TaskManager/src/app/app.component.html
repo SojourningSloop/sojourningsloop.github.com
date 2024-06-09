@@ -1,0 +1,44 @@
+
+<div id="app">
+    <app-viewport id="viewport"></app-viewport>
+
+    <!--<div id="bars">
+        <app-database></app-database>
+        <app-modify></app-modify>
+        <app-synchronize></app-synchronize>
+        <app-view></app-view>
+
+    </div>-->
+    <div id="barsColumn">
+        <app-database (onDatabaseData)="outputData($event)"></app-database>
+        <app-view (onViewData)="outputData($event)"></app-view>
+        <app-modify (onModifyData)="outputData($event)"></app-modify>
+        <app-synchronize></app-synchronize>
+        <!--<button (click)="clearCells()"></button>
+        <button (click)="updateCells()"></button>-->
+    </div>
+
+    <div class="app_viewport">
+        <ng-container *ngIf="setCells">
+            <table *ngFor="let t of test">
+                <tr>{{t}}</tr>
+            </table>
+        </ng-container>
+    </div>
+    <!--<div id="widgets">
+        <app-apply (onStateChange)="outputStateChange($event, 'apply')"></app-apply>
+        <app-clear (onTrigger)="outputStateChange($event, 'clear')"></app-clear>
+        <app-create (onTrigger)="outputStateChange($event, 'create')"></app-create>
+        <app-delete (onTrigger)="outputStateChange($event, 'delete')"></app-delete>
+        <app-save (onTrigger)="outputStateChange($event, 'save')"></app-save>
+        <app-select (onTrigger)="outputStateChange($event, 'select')"></app-select>
+        <app-synchronization (onTrigger)="outputStateChange($event, 'synchronization')"></app-synchronization>
+        <app-visualization (onTrigger)="outputStateChange($event, 'visualization')"></app-visualization>
+        <app-field></app-field>
+    </div>-->
+
+
+
+</div>
+
+<router-outlet></router-outlet>

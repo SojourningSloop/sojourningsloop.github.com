@@ -1,0 +1,6 @@
+<div class="bar">
+    <div class="retracted" *ngIf="!activeState"></div>
+    <div class="arrowRetracted" *ngIf="!activeState" (click)="toggleState(true)">≥≥≥</div>
+    <div class="expanded" *ngIf="activeState"></div>
+    <div class="arrowExpanded" *ngIf="activeState" (click)="toggleState(false)">≤≤≤</div>
+</div>

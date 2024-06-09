@@ -1,0 +1,28 @@
+.barContent{
+    display: block;
+    position: absolute;
+    top: 47.8em;
+    left: 8.3em;
+    z-index: 5;
+    height: 200px;
+    width: 600px;
+    /*border: 1px solid black;*/
+}
+
+.output{
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    height: 7em;
+    width: 28em;
+    border: 1px solid black;
+    resize: none;
+}
+
+.synchronization{
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 85%;
+}

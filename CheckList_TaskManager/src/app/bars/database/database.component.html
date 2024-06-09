@@ -1,0 +1,13 @@
+<app-bar (onStateChange)="updateBarState($event)"></app-bar>
+<div class="barContent" *ngIf="activeState">Database
+    <app-create class="newButton"></app-create>
+    <app-select class="searchButton"></app-select>
+    <p class="label" id="nameLabel">Name</p>
+    <input id="nameField" class="field" [(ngModel)]="nameFieldValue">
+    <p class="label" id="descriptionLabel">Description</p>
+    <textarea id="commentsTextbox" class="textbox" [(ngModel)]="descTextboxValue"></textarea>
+    <app-save class="saveButton" (onTrigger)="getInput()"></app-save>
+    <app-delete class="deleteButton"></app-delete>
+</div>
+
+

@@ -1,0 +1,33 @@
+.frame{
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 13%;
+    height: 1080px;
+    width: 1920px; 
+    border: 5px solid red;
+}
+
+.viewport{
+    display: block;
+    position: absolute;
+    row-gap: 10px;
+    top: 15%;
+    right: 3em;
+    height: 720px;
+    width: 1280px;
+    border: 0.3em solid black;
+}
+
+
+.barBox{
+    display: block;
+    position: relative;
+    top: 0em;
+    left: 0em;
+    height: 1071px;
+    width: 200px;
+    border: 0.3em solid black;
+    background-color: grey;
+    z-index: 0;
+}

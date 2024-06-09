@@ -1,0 +1,236 @@
+.barContent{
+    display: block;
+    position: absolute;
+    top: 32.8em;
+    left: 8.3em;
+    z-index: 5;
+    height: 200px;
+    width: 600px;
+    /*border: 1px solid black;*/
+}
+
+.newButton{
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 27%;
+}
+
+.searchButton{
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 34%;
+}
+
+.saveButton{
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 85%;
+}
+
+.deleteButton{
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 85%;
+}
+
+.radioButtonBackground{
+    display: block;
+    position: absolute;
+    top: 19.5%;
+    left: 79%;
+    height: 15px;
+    width: 15px;
+    border: 0.15em solid black;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: silver;
+}
+
+.radioButtonActive{
+    display: block;
+    position: absolute;
+    top: 0.18em;
+    left: 0.18em;
+    height: 10px;
+    width: 10px;
+    border: 0.10em solid black;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: greenyellow;
+}
+
+.radioButtonInActive{
+    display: block;
+    position: absolute;
+    top: 0.18em;
+    left: 0.18em;
+    height: 10px;
+    width: 10px;
+    border: 0.10em solid black;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: red;
+}
+
+.radioButtonGreyedOut{
+    display: block;
+    position: absolute;
+    top: 0.18em;
+    left: 0.18em;
+    height: 10px;
+    width: 10px;
+    border: 0.10em solid black;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: grey;
+}
+
+#entry{
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    left: 3em;
+}
+
+#pattern{
+    display: block;
+    position: absolute;
+    top: 2.5em;
+    left: 3em;
+}
+
+#dot{
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    left: 3em;
+}
+
+#block{
+    display: block;
+    position: absolute;
+    top: 2.5em;
+    left: 3em;
+}
+
+#person{
+    display: block;
+    position: absolute;
+    top: 4.5em;
+    left: 3em;
+}
+
+.entryContent{
+    display: block;
+    position: absolute;
+    top: 0.2em;
+    left: 16.5em;
+    height: 90%;
+    width: 40%;
+    /*border: 2px solid black;*/
+}
+
+.patternContent{
+    display: block;
+    position: absolute;
+    top: 0.2em;
+    left: 16.5em;
+    height: 90%;
+    width: 40%;
+    /*border: 2px solid black;*/
+}
+
+.radioButtonText{
+    display: block;
+    position: absolute;
+    top: -1em;
+    left: 2em;
+}
+
+.firstButtonPanel{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+.entryTypeButtonPanel{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.panelBackgroundActive{
+    display: block;
+    position: relative;
+    top: 0.2em;
+    left: 29%;
+    background: rgb(221, 255, 166);
+    height: 5.8em;
+    width: 7em;
+    z-index: -1;
+}
+
+.panelBackgroundInactive{
+    display: block;
+    position: relative;
+    top: 0.2em;
+    left: 29%;
+    background: rgb(207, 207, 207);
+    height: 5.8em;
+    width: 7em;
+    z-index: -1;
+}
+
+.field{
+    height: 1em;
+    width: 5em;
+    border: 1px solid black;
+}
+
+.label{
+    display: block;
+    position: relative;
+    margin: 0em 0em 0em 0em;
+    left: -15%;
+    height: 1em;
+    width: 7em; 
+    font-size: 12px;
+}
+
+.textbox{
+    display: block;
+    position: relative;
+    height: 4em;
+    width: 5em;
+    border: 1px solid black;
+    resize: none;
+}
+
+#column0{
+    display: grid;
+    position: absolute;
+    row-gap: 10px;
+    top: 5%;
+    left: 15%;
+}
+
+#column1{
+    display: grid;
+    row-gap: 10px;
+    position: absolute;
+    top: 5%;
+    left: 65%;
+}
+
+#contactInformationLabel{
+    display: block;
+    position: relative;
+    top: -25%;
+    font-size: 70%;
+}

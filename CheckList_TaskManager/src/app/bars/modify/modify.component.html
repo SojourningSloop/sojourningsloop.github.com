@@ -1,0 +1,124 @@
+<app-bar (onStateChange)="updateBarState($event)"></app-bar>
+
+<div class="barContent" *ngIf="activeState">Modify
+    <app-create class="newButton"></app-create>
+    <app-select class="searchButton"></app-select>
+    <app-save class="saveButton" (click)="getInput()"></app-save>
+    <app-delete class="deleteButton"></app-delete>
+
+    <div class="firstButtonPanel">
+        <div id="entry" (click)="updateRadioButtonState('first', 'entry')">
+            <div class="radioButtonActive" *ngIf="firstButtonState=='entry'"></div>
+            <div class="radioButtonInActive" *ngIf="firstButtonState!='entry'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Entry</p>
+        </div>
+
+        <div id="pattern" (click)="updateRadioButtonState('first', 'pattern')">
+            <div class="radioButtonActive" *ngIf="firstButtonState=='pattern'"></div>
+            <div class="radioButtonInActive" *ngIf="firstButtonState!='pattern'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Pattern</p>
+        </div>
+    </div>
+
+    <div class="entryTypeButtonPanel" *ngIf="firstButtonState=='entry'">
+        <div id="dot" (click)="updateRadioButtonState('entryType', 'dot')">
+            <div class="radioButtonActive" *ngIf="entryTypeButtonState=='dot'"></div>
+            <div class="radioButtonInActive" *ngIf="entryTypeButtonState!='dot'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Dot</p>
+        </div>
+
+        <div id="block" (click)="updateRadioButtonState('entryType', 'block')">
+            <div class="radioButtonActive" *ngIf="entryTypeButtonState=='block'"></div>
+            <div class="radioButtonInActive" *ngIf="entryTypeButtonState!='block'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Block</p>
+        </div>
+
+        <div id="person" (click)="updateRadioButtonState('entryType', 'person')">
+            <div class="radioButtonActive" *ngIf="entryTypeButtonState=='person'"></div>
+            <div class="radioButtonInActive" *ngIf="entryTypeButtonState!='person'"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Person</p>
+        </div>
+        <div class="panelBackgroundActive"></div>
+    </div>
+
+    <div class="entryTypeButtonPanel" *ngIf="firstButtonState!='entry'">
+        <div id="dot">
+            <div class="radioButtonGreyedOut"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Dot</p>
+        </div>
+
+        <div id="block">
+            <div class="radioButtonGreyedOut"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Block</p>
+        </div>
+
+        <div id="person">
+            <div class="radioButtonGreyedOut"></div>
+            <div class="radioButtonBackground"></div>
+            <p class="radioButtonText">Person</p>
+        </div>
+        <div class="panelBackgroundInactive"></div>
+    </div>
+
+    <div class="entryContent" *ngIf="firstButtonState=='entry'">
+        <div id="column0" *ngIf="entryTypeButtonState=='dot'">
+            <p class="label">Name</p>
+            <input class="field" [(ngModel)]="nameData">
+            <p class="label">Date/Time</p>
+            <input class="field" [(ngModel)]="dateTimeData">
+            <p class="label">Assigned To</p>
+            <input class="field" [(ngModel)]="assignedToData">
+        </div>
+        <div id="column1" *ngIf="entryTypeButtonState=='dot'">
+            <p class="label">Grouping</p>
+            <input class="field" [(ngModel)]="groupingData">
+            <p class="label">Dependencies</p>
+            <input class="field" [(ngModel)]="dependenciesData">
+        </div>
+
+        <div id="column0" *ngIf="entryTypeButtonState=='block'">
+            <p class="label">Name</p>
+            <input class="field" [(ngModel)]="nameData">
+            <p class="label">Start Date/Time</p>
+            <input class="field" [(ngModel)]="startDateTimeData">
+            <p class="label">End Date/Time</p>
+            <input class="field" [(ngModel)]="endDateTimeData">
+        </div>
+        <div id="column1" *ngIf="entryTypeButtonState=='block'">
+            <p class="label">Assigned To</p>
+            <input class="field" [(ngModel)]="assignedToData">
+            <p class="label">Grouping</p>
+            <input class="field" [(ngModel)]="groupingData">
+            <p class="label">Dependencies</p>
+            <input class="field" [(ngModel)]="dependenciesData">
+        </div>
+
+        <div id="column0" *ngIf="entryTypeButtonState=='person'">
+            <p class="label">Name</p>
+            <input class="field" [(ngModel)]="nameData">
+            <p class="label">Comments</p>
+            <textarea class="textbox" [(ngModel)]="commentsData"></textarea>
+        </div>
+        <div id="column1" *ngIf="entryTypeButtonState=='person'">
+            <p class="label">Grouping</p>
+            <input class="field" [(ngModel)]="groupingData">
+            <p class="label" id="contactInformationLabel">Contact Information</p>
+            <textarea class="textbox" [(ngModel)]="contactInformationData"></textarea>
+        </div>
+    </div>
+    <div class="patternContent" *ngIf="firstButtonState=='pattern'">
+        <div id="column0">
+            <p class="label">Name</p>
+            <input class="field" [(ngModel)]="nameData">
+            <p class="label">Expression</p>
+            <input class="field" [(ngModel)]="expressionData">
+        </div>
+    </div>
+</div>

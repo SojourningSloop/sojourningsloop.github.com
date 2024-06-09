@@ -1,0 +1,17 @@
+.field{
+    display: block;
+    position: relative;
+    height: 0.8em;
+    width: 4em;
+    border: 0.15em solid black;
+    z-index: 1;
+    background-color: greenyellow;
+}
+
+#field{
+    display: block;
+    position: relative;
+    top: -60%;
+    left: 5%;
+    font-size: 10px;
+}
