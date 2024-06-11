@@ -22,6 +22,8 @@ export class ViewComponent {
   public radioButtonState:string = "filter";
 
   @Output() onViewData =  new EventEmitter<any>();
+  @Output() onVisualize = new EventEmitter<any>();
+  @Output() onFilter = new EventEmitter<any>();
 
   updateBarState(selectedState: Boolean){
     this.activeState = selectedState;
@@ -45,6 +47,16 @@ export class ViewComponent {
 
   updateRadioButtonState(selectedState: string){
     this.radioButtonState = selectedState;
+  }
+
+  applyTriggered(arg: any){
+    console.log(arg);
+    this.onVisualize.emit(arg);
+  }
+
+  filterTriggered(arg: any){
+    console.log(arg);
+    this.onFilter.emit(arg);
   }
 
   getInput(){

@@ -1,8 +1,8 @@
 <app-bar (onStateChange)="updateBarState($event)"></app-bar>
 
 <div class="barContent" *ngIf="activeState">Synchronize
-    <app-synchronization class="synchronization"></app-synchronization>
-    <textarea class="output"></textarea>
+    <app-synchronization class="synchronization" (onTrigger)="triggerSyncResults($event)"></app-synchronization>
+    <textarea class="output" [(ngModel)]="results"></textarea>
 
 
 

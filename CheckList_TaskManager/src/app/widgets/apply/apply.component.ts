@@ -8,11 +8,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class ApplyComponent {
   public applicationState = false;
 
-  @Output() onStateChange = new EventEmitter<any>();
+  @Output() onApplyStateChange = new EventEmitter<any>();
 
   toggleState(selectedState: boolean){
     this.applicationState = selectedState;
-    this.onStateChange.emit(this.applicationState);
+    this.onApplyStateChange.emit(this.applicationState);
   }
   
 }

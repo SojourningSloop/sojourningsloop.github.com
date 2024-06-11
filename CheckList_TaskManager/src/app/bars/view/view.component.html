@@ -6,11 +6,12 @@
     <div class="saveButton" *ngIf="(radioButtonState=='filter') || (radioButtonState=='export')" (click)="getInput()"></div>
     <div class="deleteButton" *ngIf="radioButtonState=='filter'"></div>
 
-    <div class="applyButton" *ngIf="(radioButtonState=='filter') && (!applicationState0)" (click)="toggleState('applicationState0')"></div>
-    <div class="unApplyButton" *ngIf="(radioButtonState=='filter') && (applicationState0)" (click)="toggleState('applicationState0')"></div>
+    <!--<div class="applyButton" *ngIf="(radioButtonState=='filter') && (!applicationState0)" (click)="toggleState('applicationState0')"></div>
+    <div class="unApplyButton" *ngIf="(radioButtonState=='filter') && (applicationState0)" (click)="toggleState('applicationState0')"></div>-->
 
-    <div class="applyButton" *ngIf="(radioButtonState=='visualize') && (!applicationState1)" (click)="toggleState('applicationState1')"></div>
-    <div class="unApplyButton" *ngIf="(radioButtonState=='visualize') && (applicationState1)" (click)="toggleState('applicationState1')"></div>
+    <app-apply class="applyAppButton" *ngIf="(radioButtonState=='filter')" (onApplyStateChange)="filterTriggered($event)"></app-apply>
+
+    <app-apply class="applyAppButton" *ngIf="(radioButtonState=='visualize')" (onApplyStateChange)="applyTriggered($event)"></app-apply>
 
     <div class="radioButtonPanel">
         <div id="filter" (click)="updateRadioButtonState('filter')">

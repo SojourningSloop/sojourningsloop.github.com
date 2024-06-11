@@ -69,6 +69,14 @@
     background-color: grey;
 }
 
+.applyAppButton{
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 86%;
+    z-index: 1;
+}
+
 .unApplyButton{
     display: block;
     position: absolute;

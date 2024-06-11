@@ -11,7 +11,7 @@
     </div>-->
     <div id="barsColumn">
         <app-database (onDatabaseData)="outputData($event)"></app-database>
-        <app-view (onViewData)="outputData($event)"></app-view>
+        <app-view (onViewData)="outputData($event)" (onVisualize)="updateVisualizeState($event)" (onFilter)="updateFilterState($event)"></app-view>
         <app-modify (onModifyData)="outputData($event)"></app-modify>
         <app-synchronize></app-synchronize>
         <!--<button (click)="clearCells()"></button>
@@ -24,6 +24,11 @@
                 <tr>{{t}}</tr>
             </table>
         </ng-container>
+    </div>
+
+    <div class="gantt" *ngIf="visualizeState==true">
+        <img *ngIf="!filterState" src="/assets/Gantt_Chart.png">
+        <img *ngIf="filterState" src="/assets/Gantt_Chart_Filtered.png">
     </div>
     <!--<div id="widgets">
         <app-apply (onStateChange)="outputStateChange($event, 'apply')"></app-apply>

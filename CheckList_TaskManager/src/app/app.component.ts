@@ -21,6 +21,8 @@ export class AppComponent {
 
   public tableIndex: number = 0;
 
+  public visualizeState: Boolean = false;
+  public filterState: Boolean = false;
 
   public database: {[id : string] : {[id : string] : string[];} } = 
     {"ID" : {"UnusedID": ["0"], "availableIDs" : []},
@@ -102,6 +104,14 @@ export class AppComponent {
 
   outputStateChange(arg: any, id:string){
     console.log(id + " is now at state: " + arg)
+  }
+
+  updateVisualizeState(arg: any){
+    this.visualizeState = arg;
+  }
+
+  updateFilterState(arg: any){
+    this.filterState = arg;
   }
 
   clearCells(){

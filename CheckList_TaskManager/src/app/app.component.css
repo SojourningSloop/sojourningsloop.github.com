@@ -54,6 +54,24 @@ tr{
     overflow-y: scroll; /* Show vertical scrollbar */
 }
 
+.gantt{
+    display: grid;
+    position: absolute;
+    top: 15%;
+    right: 10em;
+    height: 720px;
+    width: 1000px;
+    border: 0.3em solid yellow;
+    z-index: 7;
+}
+
+.gantt > img{
+    display: grid;
+    position: absolute;
+    height: 720px;
+    width: 1000px;
+}
+
 #bars{
     display: block;
     position: relative;
